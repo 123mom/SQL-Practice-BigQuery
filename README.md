@@ -1,2 +1,2 @@
-# SQL-Practice-BigQuery
+# SQL-Practice
 My daily coding practice and learning documentation
