@@ -1,0 +1,59 @@
+create database bookstore_db;
+use bookstore_db;
+
+create table books(BookID INTEGER, title char(100), Author char(100), Price INTEGER);
+
+INSERT INTO books(BookID , title , Author , Price )
+values (1001,'The Alchemist','Paulo Coelho',12);
+INSERT INTO books(BookID , title , Author , Price )
+values (1002,'Rich dad poor dad','Robert Kiyosaki',15);
+INSERT INTO books(BookID , title , Author , Price )
+values (1003,'Atomic Habits','James Clear',18);
+
+select title from books;
+
+create table customers(CustomerName char(100), Email char(100));
+
+INSERT INTO customers(CustomerName , Email )
+values ('John Rock','john.doe@email.com');
+INSERT INTO customers(CustomerName , Email )
+values ('Alice Smith','alice.smith@email.com');
+
+select CustomerName from customers;
+
+create database company;
+use company;
+
+create table Employee(EmployeeID INTEGER, EmployeeName char(100), Department char(100), JoiningDate date);
+INSERT INTO Employee(EmployeeID, EmployeeName, Department, JoiningDate)
+values(101 ,'John Smith','IT ','2020-06-15');
+INSERT INTO Employee(EmployeeID, EmployeeName, Department, JoiningDate)
+values(102 ,'Alice Brown','HR ','2019-08-25');
+INSERT INTO Employee(EmployeeID, EmployeeName, Department, JoiningDate)
+values(103 ,'Robert Lee','IT ','2021-02-10');
+INSERT INTO Employee(EmployeeID, EmployeeName, Department, JoiningDate)
+values(104 ,'Emma Davis','Finance ','2018-11-30');
+ 
+
+create table project(ProjectID char(100), ProjectName char(100),EmployeeID INTEGER , StartDate date, EndDate date);
+INSERT INTO project(ProjectID, ProjectName, EmployeeID, StartDate,EndDate)
+values('P001' ,'CRM Upgrade',101,'2023-01-10','2023-06-20');
+INSERT INTO project(ProjectID, ProjectName, EmployeeID, StartDate,EndDate)
+values('P002' ,'Recuritment AI',102,'2022-07-05','2022-12-15');
+INSERT INTO project(ProjectID, ProjectName, EmployeeID, StartDate,EndDate)
+values('P003' ,'Cloud Migration',103,'2023-03-01','2023-12-01');
+INSERT INTO project(ProjectID, ProjectName, EmployeeID, StartDate,EndDate)
+values('P004' ,'Budget Analysis',104,'2023-09-10','2023-02-28');
+
+
+create table salary(EmployeeID INTEGER,salary integer, bonus integer, PaymentDate date);
+INSERT INTO salary(EmployeeID, salary, bonus, PaymentDate)
+values(101 ,60000,5000,'2023-12-31');
+INSERT INTO salary(EmployeeID, salary, bonus, PaymentDate)
+values(102 ,50000,4000,'2023-12-31');
+INSERT INTO salary(EmployeeID, salary, bonus, PaymentDate)
+values(103 ,65000,6000,'2023-12-31');
+INSERT INTO salary(EmployeeID, salary, bonus, PaymentDate)
+values(104 ,70000,7000,'2023-12-31');
+
+select salary from salary;
